@@ -16,6 +16,79 @@
     }
     .Content {
         position: relative;
+        text-align: center;
+        .Info {
+            margin-top: 80px;
+            display: flex;
+            justify-content: space-between;
+            .Left {
+                flex: 1;
+                height: 303px;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .ImgContent {
+                    width: 100%;
+                    min-height: 303px;
+                }
+                .Text {
+                    padding: 40px;
+                    box-sizing: border-box;
+                    position: absolute;
+                    .Title {
+                        font-size: 2rem;
+                        font-weight: 500;
+                        margin-bottom: 40px;
+                    }
+                    .SubTitle {
+                        margin-bottom: 40px;
+                    }
+                }
+            }
+
+            .Right {
+                margin-left: 20px;
+                width: 320px;
+                height: 303px;
+                overflow-y: scroll;
+                .Item {
+                    float: left;
+                    width: 150px;
+                    height: 150px;
+                    margin-right: 3px;
+                    margin-bottom: 3px;
+                    list-style: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    @include background-gradient(rgba($v-plum, .25), rgba($v-purple-dark, .6));
+                    .ImgParner {
+                        max-width: 120px;
+                        max-height: 120px;
+                    }
+                }
+
+            }
+            .Right::-webkit-scrollbar {
+                width: 3px;
+              }
+              
+            /* Track */
+            .Right::-webkit-scrollbar-track {
+            background: $v-purple-light; 
+            }
+            
+            /* Handle */
+            .Right::-webkit-scrollbar-thumb {
+            background: $v-plum-dark; 
+            }
+            
+            /* Handle on hover */
+            .Right::-webkit-scrollbar-thumb:hover {
+            background: $v-purple-light-1; 
+            }
+        }
         .List {
             margin-top: 32px;
             display: flex;

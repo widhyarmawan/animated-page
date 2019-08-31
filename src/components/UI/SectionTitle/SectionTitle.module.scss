@@ -5,6 +5,7 @@
     font-size: 4.4rem;
     font-weight: 500;
     color: rgba($v-white-dark, .15);
+    min-height: 50px;
     @include work-sans-font-family();
     .Label {
         position: relative;

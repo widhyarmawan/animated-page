@@ -8,7 +8,7 @@
     .Content {
         text-align: center;
         .List {
-            margin-top: 100px;
+            margin-top: 80px;
             padding: 24px;
             @include background-gradient(rgba($v-plum, .25), rgba($v-indigo-light, .8));
             @include border-radius(border-radius, 8px);

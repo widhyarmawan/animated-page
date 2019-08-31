@@ -6,32 +6,20 @@
     width: 100%;
     display: flex;
     align-items: center;
-    .ImgBg {
-        position: absolute;
-        display: block;
-        left: 0;
-        width: 280px;
-        z-index: 0;
-    }
+    
     .Content {
         position: relative;
-        .List {
-            margin-top: 32px;
+        text-align: center;
+        .MapWrap {
+            margin-top: 60px;
             display: flex;
+            justify-content: center;
             align-items: center;
-            .SmallBox {
-                width: 298px;
-                height: 298px;
-                @include background-gradient($v-purple-light , $v-purple-dark-1);
-                @include border-radius(border-radius, 8px);
+            .Img {
+                width: 100% ;
             }
-            .LargeBox {
-                flex: 1;
-                height: 406px;
-                // @include background-gradient(rgba($v-purple-light, .15), rgba($v-purple-dark-1, .2));
-                background-image: linear-gradient(to bottom, rgba(228, 197, 255, 0.15), rgba(61, 15, 115, 0.2));
-                @include border-radius(border-radius, 8px);
-
+            .Action {
+                position: absolute;
             }
         }
     }
