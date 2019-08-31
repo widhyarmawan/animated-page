@@ -1,0 +1,24 @@
+@import '../../assets/styles/animation';
+@import '../../assets/styles/variable';
+@import '../../assets/styles/mixin';
+
+.Wrapper {
+    .Globe {
+        text-align: center;
+        margin-bottom: 32px;
+        img {
+            width: 460px;
+        }
+    }
+    .Desc {
+        margin-bottom: 32px;
+        font-size: 3.2rem;
+        text-align: center;
+        text-shadow: 0 0 20px rgba($v-white-light, .5);
+        @include work-sans-font-family();
+    }
+    .Action {
+        text-align: center;
+        margin-bottom: 24px;
+    }
+}

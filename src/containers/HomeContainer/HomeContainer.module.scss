@@ -1,0 +1,14 @@
+@import '../../assets/styles/variable';
+@import '../../assets/styles/mixin';
+
+.Wrapper {
+    width: 100%;
+    min-width: $v-min-width;
+    .Section {
+        min-height: 620px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // border: 1px solid white;
+    }
+}

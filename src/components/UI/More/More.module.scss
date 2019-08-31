@@ -1,0 +1,21 @@
+@import '../../../assets/styles/variable';
+@import '../../../assets/styles/mixin';
+.Wrapper {
+    color: $v-plum;
+    display: inline-flex;
+    align-items: center;
+    @include transition(all .3s);
+    .Icon {
+        // position: absolute;
+        margin-top: 4px;
+        margin-left: 5px;
+        @include transition(all .3s);
+    }
+}
+
+.Wrapper:hover {
+    text-shadow: 0 0 6px $v-plum-light-1;
+    .Icon {
+        margin-left: 12px;
+    }
+}

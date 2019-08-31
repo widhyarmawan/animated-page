@@ -1,0 +1,55 @@
+@import '../../../assets/styles/animation';
+@import '../../../assets/styles/mixin';
+@import '../../../assets/styles/variable';
+
+.Wrapper {
+    position: relative;
+    .Label {
+        display: flex;
+        align-items: center;
+        .Icon {
+            margin-top: 4px;
+            margin-left: 8px;
+            @include transition(all 0.3s ease-in-out);
+            &.IsActive {
+                @include transform(rotate(-180deg));
+            }
+        }
+    }
+    .Label:hover {
+        text-shadow: 0 0 6px $v-plum-light-1;
+    }
+    .List {
+        width: 100%;
+        min-width: 200px;
+        padding: 8px 0;
+        margin: 0;
+        left: 0;
+        position: absolute;
+        background: $v-plum-light-1;
+        color: $v-purple-dark;
+        box-sizing: border-box;
+        top: 40px;
+        font-size: 1.3rem;
+        @include box-shadow(0 1px 4px 1px rgba(0,0,0,0.05));
+        @include border-radius(border-radius, 4px);
+        .Item {
+            list-style: none;
+            padding: 10px 16px;
+            @include transition( background .5s);
+        }
+        .Item:hover {
+            background: $v-white-dark;
+        }
+    }
+}
+
+
+@include dropdown();
+.Open {
+    @include animation(open .3s ease-out);
+}
+
+.Close {
+    @include animation(close .3s ease-out);
+}

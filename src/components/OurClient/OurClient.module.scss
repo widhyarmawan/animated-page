@@ -1,0 +1,54 @@
+@import '../../assets/styles/mixin';
+@import '../../assets/styles/variable';
+
+.Wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    .Content {
+        text-align: center;
+        .List {
+            margin-top: 100px;
+            padding: 24px;
+            @include background-gradient(rgba($v-plum, .25), rgba($v-indigo-light, .8));
+            @include border-radius(border-radius, 8px);
+            .Row {
+                // width: 100%;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 1px solid rgba($v-plum, .25);
+                .Client {
+                    display: flex;
+                    min-height: 160px;
+                    flex: 1;
+                    justify-content: center;
+                    align-items: center;
+                    border-right: 1px solid rgba($v-plum, .25);
+                    cursor: pointer;
+                    .Img {
+                        @include transition(all .3s);
+                        -webkit-filter: grayscale(100%);
+                        filter: grayscale(100%);
+                        max-width: 90px;
+                    }
+                }
+                .Client:hover {
+                    .Img {
+                        -webkit-filter: none;
+                        filter: none;
+                    }
+                }
+                .Client:last-child {
+                    border-right: none;
+                }
+            }
+            .Row:last-child {
+                border-bottom: none;
+            }
+
+        }
+    }
+}

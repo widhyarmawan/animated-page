@@ -1,0 +1,39 @@
+@import '../../assets/styles/mixin';
+@import '../../assets/styles/variable';
+
+.Wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    .ImgBg {
+        position: absolute;
+        display: block;
+        top: -150px;
+        left: 0;
+        width: 100%;
+        z-index: 0;
+    }
+    .Content {
+        position: relative;
+        .List {
+            margin-top: 32px;
+            display: flex;
+            align-items: center;
+            .SmallBox {
+                width: 298px;
+                height: 298px;
+                @include background-gradient($v-purple-light , $v-purple-dark-1);
+                @include border-radius(border-radius, 8px);
+            }
+            .LargeBox {
+                flex: 1;
+                height: 406px;
+                // @include background-gradient(rgba($v-purple-light, .15), rgba($v-purple-dark-1, .2));
+                background-image: linear-gradient(to bottom, rgba(228, 197, 255, 0.15), rgba(61, 15, 115, 0.2));
+                @include border-radius(border-radius, 8px);
+
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+@import '../../../assets/styles/variable';
+@import '../../../assets/styles/mixin';
+
+.Wrapper {
+    font-size: 4.4rem;
+    font-weight: 500;
+    color: rgba($v-white-dark, .15);
+    @include work-sans-font-family();
+    .Label {
+        position: relative;
+        display: inline-flex;
+        .Shadow {
+            @include transform(scale(.8));
+            color: $v-white-dark;
+            bottom: -10px;
+            position: absolute;
+            display: flex;
+            justify-content: flex-start;
+        }
+        .Underline {
+            position: absolute;
+            width: 50%;
+            height: 1px;
+            bottom: -28px;
+            background: $v-plum-light;
+            
+        }
+        &.Center {
+            justify-content: center;
+        }
+    }
+}

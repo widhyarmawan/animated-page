@@ -1,0 +1,38 @@
+/* 
+##########################
+ANIMATION
+Style Sheet for Nodeflux
+version: 1.0
+author: I Made Widhyarmawan
+email: widhyarmawan20@gmail.com
+##########################*/
+
+@mixin dropdown ($suffix:"") {
+    @keyframes open#{$suffix} {
+        0% {
+            opacity: 0;
+            @include transform(translateY(-10%));
+        }
+        30% {
+            opacity: .3;
+            @include transform(translateY(-5%));
+        }
+        100% {
+            opacity: 1;
+            @include transform(translateY(0));
+        }
+    }
+    
+    @keyframes close#{$suffix} {
+        0% {
+            opacity: 1;
+            @include transform(translateY(0));
+        }
+        
+        100% {
+            opacity: 0;
+            @include transform(translateY(-10%));
+        }
+        
+    }
+}

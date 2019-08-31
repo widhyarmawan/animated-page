@@ -1,0 +1,48 @@
+@import '../../../assets/styles/variable';
+@import '../../../assets/styles/mixin';
+
+.Button {
+    display: inline-block;
+    font-size: 1.6rem;
+    height: 40px;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    outline: none !important;
+    border: none;
+    padding: 0 1.8em;
+    cursor: pointer;
+    @include dosis-font-family();
+    background: $v-plum-dark-1;
+    @include border-radius(border-radius, 22px);
+    @include transition(opacity .3s);
+    @include transition(all 0.3s ease-in-out);
+    color: $v-white;
+    &.BtnOutline {
+        border: 1px solid $v-white;
+        background: none;
+    }
+    &.BtnOutline:hover {
+        border: 1px solid $v-plum-dark-1;
+        background: $v-plum-dark-1;
+        @include box-shadow(0 2px 16px 2px rgba(#7242d9,.35));
+    }
+    &.BtnFill {
+        @include background-gradient-x($v-purple-light-1, $v-plum-dark-1);
+    }
+    &.BtnFill:hover {
+        @include box-shadow(0 2px 16px 2px rgba(#7242d9,.35));
+    }
+
+    &.BtnSmall {
+        height: 32px;
+        font-size: 1.2rem;
+    }
+}
+
+
+.Button:disabled {
+    opacity: .7;
+}
