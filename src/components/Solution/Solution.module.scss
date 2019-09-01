@@ -9,8 +9,8 @@
     .ImgBg {
         position: absolute;
         display: block;
-        left: 0;
-        width: 280px;
+        right: 0;
+        width: 600px;
         z-index: 0;
     }
     .Content {
@@ -69,14 +69,23 @@
                     box-sizing: border-box;
                     text-align: left;
                     @include background-gradient(rgba($v-plum, .25), rgba($v-indigo-light, .8));
-                    @include border-radius(border-radius, 18px);
+                    @include border-radius(border-radius, 16px);
                     .Title {
-                        margin-bottom: 16px;
+                        position: relative;
+                        margin-bottom: 24px;
                         font-size: 2.4rem;
                         font-weight: 500;
                         span {
                             font-weight: 300;
                         }
+                    }
+                    .Title::before {
+                        content: '';
+                        position: absolute;
+                        width: 120px;
+                        height: 2px;
+                        background: $v-plum-dark;
+                        bottom: -16px;
                     }
                     .Desc {
                         line-height: 1.8em;

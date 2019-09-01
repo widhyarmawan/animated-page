@@ -1,7 +1,7 @@
 
 import React from 'react';
 import classes from './Solution.module.scss';
-import brainWaveImgSrc from '../../assets/images/brain-wave.png';
+import bgImgSrc from '../../assets/images/wave-copy.png';
 import SectionTitle from '../UI/SectionTitle/SectionTitle';
 import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
@@ -52,7 +52,7 @@ const solution = props => {
 
     return (
         <div className={classes.Wrapper}>
-            <img className={classes.ImgBg} src={brainWaveImgSrc} alt="bg" />
+            <img className={classes.ImgBg} src={bgImgSrc} alt="bg" />
             <div className="container-3">
                 <div className={classes.Content}>
                     <SectionTitle label="Solution" align="center" />
@@ -71,7 +71,9 @@ const solution = props => {
                                                 </div>
                                             </div>
                                             <div className={['bx-right',classes.Right].join(' ')}>
-                                                <div className={classes.Title}>Security & <span>Defense</span></div>
+                                                <div className={classes.Title}>
+                                                    Security & <span>Defense</span>
+                                                </div>
                                                 <div className={classes.Desc}>
                                                     {item.text}
                                                 </div>
