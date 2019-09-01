@@ -5,6 +5,7 @@
     display: inline-flex;
     align-items: center;
     @include transition(all .3s);
+    cursor: pointer;
     .Icon {
         // position: absolute;
         margin-top: 4px;
@@ -14,6 +15,7 @@
 }
 
 .Wrapper:hover {
+    color: $v-white-dark;
     text-shadow: 0 0 6px $v-plum-light-1;
     .Icon {
         margin-left: 12px;

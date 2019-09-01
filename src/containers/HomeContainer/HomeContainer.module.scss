@@ -4,6 +4,7 @@
 .Wrapper {
     width: 100%;
     min-width: $v-min-width;
+    overflow: hidden;
     .Section {
         min-height: 620px;
         display: flex;

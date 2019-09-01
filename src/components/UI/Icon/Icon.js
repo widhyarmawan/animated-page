@@ -21,6 +21,16 @@ const icon = (props) => {
                 viewBox = '0 0 7 4';
             path = <path fill={fill} fillRule="nonzero" d="M6.183 0L3.5 2.486.817 0 0 .757 3.5 4 7 .757z"/>;
             break;
+        case ('ico-arrow-left'):
+            path =  <g id="ico-arrow-left" stroke={stroke} strokeWidth="1" fill={fill} fillRule="evenodd">
+                <polygon id="Shape" fill={fill} fillRule="nonzero" transform="translate(12.000000, 11.557711) scale(-1, 1) rotate(90.000000) translate(-12.000000, -11.557711) " points="4 15 5.11542256 16.1154226 12 9.23084512 18.8845775 16.1154226 20 15 12 7"></polygon>
+            </g>;
+            break;
+        case ('ico-arrow-right'):
+            path =  <g id="ico-arrow-right" stroke={stroke} strokeWidth="1" fill={fill} fillRule="evenodd">
+                <polygon id="Shape" fill={fill} fillRule="nonzero" transform="translate(12.000000, 11.557711) rotate(90.000000) translate(-12.000000, -11.557711) " points="4 15 5.11542256 16.1154226 12 9.23084512 18.8845775 16.1154226 20 15 12 7"></polygon>
+            </g>;
+            break;
         default:
             path = null;
     };

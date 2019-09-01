@@ -15,24 +15,80 @@
     }
     .Content {
         position: relative;
-        .List {
-            margin-top: 32px;
-            display: flex;
-            align-items: center;
-            .SmallBox {
-                width: 298px;
-                height: 298px;
-                @include background-gradient($v-purple-light , $v-purple-dark-1);
-                @include border-radius(border-radius, 8px);
-            }
-            .LargeBox {
-                flex: 1;
-                height: 406px;
-                // @include background-gradient(rgba($v-purple-light, .15), rgba($v-purple-dark-1, .2));
-                background-image: linear-gradient(to bottom, rgba(228, 197, 255, 0.15), rgba(61, 15, 115, 0.2));
-                @include border-radius(border-radius, 8px);
-
+        text-align: center;
+        .Slide {
+            margin-top: 80px;
+            min-height: 300px;
+            position: relative;
+            padding:24px;
+            .Box {
+                padding: 24px 0;
+                // border: 1px solid red;
+                display: flex;
+                justify-content: space-between;
+                .Left {
+                    flex: 1;
+                    .ImgWrap {
+                        @include box-shadow(0 2px 16px 2px rgba(#7242d9,.35));
+                        // border: 1px solid red;
+                        width: 100%;
+                        height: 300px;
+                        overflow: hidden;
+                        position: relative;
+                        @include border-radius(border-radius, 8px);
+                        .ImgContent {
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            height: 130%;
+                            width: auto;
+                            @include transition(height .2s);
+                            @include transform(translate(-50%,-50%));
+                        }
+                    }
+                }
+                .Right {
+                    margin-left: 24px;
+                    width: 300px;
+                    padding: 24px;
+                    box-sizing: border-box;
+                    text-align: left;
+                    @include background-gradient(rgba($v-plum, .25), rgba($v-indigo-light, .8));
+                    @include border-radius(border-radius, 18px);
+                    .Title {
+                        margin-bottom: 16px;
+                        font-size: 2.4rem;
+                        font-weight: 500;
+                        span {
+                            font-weight: 300;
+                        }
+                    }
+                    .Desc {
+                        line-height: 1.8em;
+                        color: rgba($v-plum-light-1, .8);
+                    }
+                }
             }
         }
     }
+}
+
+.Arrow {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    padding: 4px;
+    @include background-gradient(rgba($v-plum, .25), rgba($v-indigo-light, .8));
+    @include transition(all 0.3s );
+    &.PrevArrow {
+        left: -42px;
+    }
+    &.NextArrow {
+        right: -42px;
+    }
+}
+.Arrow:hover {
+    @include background-gradient(rgba($v-plum, .5), rgba($v-purple-light, .8));
+    @include box-shadow(0 2px 16px 2px rgba(#7242d9,.35));
 }

@@ -16,23 +16,111 @@
     }
     .Content {
         position: relative;
-        .List {
-            margin-top: 32px;
+        text-align: center;
+        .Info {
+            margin-top: 80px;
             display: flex;
-            align-items: center;
-            .SmallBox {
-                width: 298px;
-                height: 298px;
-                @include background-gradient($v-purple-light , $v-purple-dark-1);
+            border-left: 1px solid $v-purple;
+            padding-left: 24px;
+            min-height: 300px;
+            .ImgWrap {
+                width: 304px;
+                height: 350px;
+                overflow: hidden;
+                position: relative;
                 @include border-radius(border-radius, 8px);
+                .ImgContent {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    height: 120%;
+                    width: auto;
+                    @include transition(height .2s);
+                    @include transform(translate(-50%,-50%));
+                }
             }
-            .LargeBox {
+            .Text {
+                margin-left: 24px;
+                text-align: left;
                 flex: 1;
-                height: 406px;
-                // @include background-gradient(rgba($v-purple-light, .15), rgba($v-purple-dark-1, .2));
-                background-image: linear-gradient(to bottom, rgba(228, 197, 255, 0.15), rgba(61, 15, 115, 0.2));
-                @include border-radius(border-radius, 8px);
+                .Title {
+                    color: $v-plum;
+                    display: inline-flex;
+                    padding-bottom: 30px;
+                    border-bottom: 3px solid $v-plum-light-1;
+                    font-size: 4.4rem;
+                    font-weight: 500;
+                    margin-bottom: 30px;
+                    text-shadow: 0 0 6px $v-plum-light;
+                }
+                .Desc {
+                    line-height: 2em;
+                    margin-bottom: 30px;
+                }
+            }
+            .Nav {
+                position: absolute;
+                left: -233px;
+                margin: 0;
+                padding: 0;
+                .NavItem {
+                    list-style: none;
+                    display: flex;
+                    flex-direction: row-reverse;
+                    align-items: center;
+                    padding: 24px 0;
+                    cursor: pointer;
+                    .Label {
+                        color: $v-plum-light-1;
+                        opacity: .7;
+                        @include transition( all .2s);
+                    }
+                    .Dot {
+                        position: relative;
+                        margin-left: 15px;
+                        width: 13px;
+                        background: $v-purple-light;
+                        height: 13px;
+                        @include transition( all .3s);
+                        @include border-radius(border-radius, 50%);
+                    }
+                    .Dot::before {
+                        position: absolute;
+                        border: 1px solid $v-purple-light;
+                        @include border-radius(border-radius, 50%);
+                        content: '';
+                        width: 17px;
+                        height: 17px;
+                        top: -3px;
+                        left: -3px;
+                        @include transition( all .3s);
 
+                    }
+                    &.Active {
+                        .Label {
+                            color: $v-white;
+                            text-shadow: 0 0 6px $v-plum-light-1;
+                        }
+                        .Dot {
+                            background: $v-plum-dark;
+                        }
+                        .Dot::before {
+                            border: 1px solid $v-plum-dark;
+                        }
+                    }
+                }
+                .NavItem:hover {
+                    .Label {
+                        color: $v-white;
+                        text-shadow: 0 0 6px $v-plum-light-1;
+                    }
+                    .Dot {
+                        background: $v-plum-dark;
+                    }
+                    .Dot::before {
+                        border: 1px solid $v-plum-dark;
+                    }
+                }
             }
         }
     }
