@@ -27,13 +27,13 @@
     &.BtnOutline:hover {
         border: 1px solid $v-plum-dark-1;
         background: $v-plum-dark-1;
-        @include box-shadow(0 2px 16px 2px rgba(#7242d9,.35));
+        @include box-shadow(0 2px 16px 2px rgba($v-purple-light-1,.35));
     }
     &.BtnFill {
         @include background-gradient-x($v-purple-light-1, $v-plum-dark-1);
     }
     &.BtnFill:hover {
-        @include box-shadow(0 2px 16px 2px rgba(#7242d9,.35));
+        @include box-shadow(0 2px 16px 2px rgba($v-purple-light-1,.5));
     }
 
     &.BtnSmall {

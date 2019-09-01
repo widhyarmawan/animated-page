@@ -20,6 +20,7 @@ const reachUs = props => {
                                 clicked={props.exploreClicked}>
                                     Contact Us
                             </Button>
+                            <div className={[classes.LeftLine].join(' ')}></div>
                         </div>
                     </div>
                 </div>
