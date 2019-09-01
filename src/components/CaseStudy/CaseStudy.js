@@ -23,7 +23,7 @@ class CaseStudy extends Component {
                 label : 'Electronic City',
                 text : 'Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis.'
             }],
-            indexSelected: 1
+            indexSelected: 0
         };
     }
 

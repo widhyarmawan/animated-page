@@ -8,8 +8,7 @@ html {
 }
 
 body {
-	margin: 0;
-	min-width: $v-min-width;  
+	margin: 0; 
 	color: $v-white;
 	font-size: 1.6rem;
 	line-height: 1.4em;
@@ -17,7 +16,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	@include work-sans-font-family();
-	@include background-gradient($v-indigo-dark, $v-indigo-light);
+	// @include background-gradient($v-indigo-dark, $v-indigo-light);
 }
 
 .container-1 {

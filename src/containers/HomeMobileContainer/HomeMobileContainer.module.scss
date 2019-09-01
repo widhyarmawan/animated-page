@@ -1,0 +1,16 @@
+@import '../../assets/styles/variable';
+@import '../../assets/styles/mixin';
+
+.Wrapper {
+    background: $v-purple-dark-1;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .Content {
+        .Logo {
+            width: 130px;
+        }
+    }
+}

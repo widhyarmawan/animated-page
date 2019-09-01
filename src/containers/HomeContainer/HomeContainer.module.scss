@@ -5,6 +5,7 @@
     width: 100%;
     min-width: $v-min-width;
     overflow: hidden;
+    @include background-gradient($v-indigo-dark, $v-indigo-light);
     .Section {
         min-height: 620px;
         display: flex;
