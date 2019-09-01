@@ -63,8 +63,9 @@ const solution = props => {
                                     className="slider-content">
                                     <div className="inner">
                                         <div className={classes.Box}>
-                                                <img className={['img-1',classes.ImgContent1].join(' ')} src={contentImg1} alt="content" />
-                                                <img className={['img-2',classes.ImgContent2].join(' ')} src={contentImg2} alt="content" />
+                                            <img className={['img-1',classes.ImgContent1].join(' ')} src={contentImg1} alt="content" />
+                                            <img className={['img-2',classes.ImgContent2].join(' ')} src={contentImg2} alt="content" />
+                                            <div className={['img-2',classes.Pulse].join(' ')}></div>
                                             <div className={['bx-left',classes.Left].join(' ')}>
                                                 <div className={classes.ImgWrap}>
                                                     <img className={classes.ImgContent} src={contentImg} alt="content" />
