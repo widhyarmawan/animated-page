@@ -1,13 +1,13 @@
 .slide {
     .bx-left {
-        transition: all 0.4s ease;
-        -webkit-transform: translateY(50px);
-        transform: translateY(50px);
+        transition: all .5s ease;
+        -webkit-transform: translateY(40px);
+        transform: translateY(40px);
         opacity: 0;
     }
     .animateOut .bx-left {
-        -webkit-transition-delay: .3s;
-        transition-delay: .3s;
+        -webkit-transition-delay: .2s;
+		transition-delay: .2s;
     }
     &.current {
         .bx-left {
@@ -19,21 +19,23 @@
         }
     }
     &.animateIn {
+        -webkit-transition-delay: .1s;
+        transition-delay: .1s;
         &.previous {
             .bx-left {
-                -webkit-transform: translateY(20);
-                transform: translateY(20);
-                -webkit-transition-delay: .12s;
-                transition-delay: .12s;
-                opacity: 1;
+                -webkit-transform: translateY(-50px);
+                transform: translateY(-50px);
+                -webkit-transition-delay: .1s;
+                transition-delay: .1s;
+                opacity: 0;
             }
         }
         &.next {
             .bx-left {
-                -webkit-transform: translateY(-10);
-                transform: translateY(-10);
-                -webkit-transition-delay: .12s;
-                transition-delay: .12s;
+                -webkit-transform: translateY(-50px);
+                transform: translateY(-50px);
+                -webkit-transition-delay: 1.3s;
+                transition-delay: 1.3s;
                 opacity: 1;
             }
         }
@@ -43,8 +45,8 @@
 .slide {
     .bx-right {
         transition: all 0.3s ease;
-        -webkit-transform: translateY(-20px);
-        transform: translateY(-20px);
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
         opacity: 0;
     }
     .animateOut .bx-right {
@@ -77,6 +79,99 @@
                 -webkit-transition-delay: .5s;
                 transition-delay: .5s;
                 opacity: 1;
+            }
+        }
+    }
+}
+
+
+.slide {
+    .img-1 {
+        transition: all .7s ease;
+        -webkit-transform: translateY(60px);
+        transform: translateY(60px);
+        opacity: 0;
+    }
+    .animateOut .img-1 {
+        -webkit-transform: translateY(-50px);
+                transform: translateY(-50px);
+        -webkit-transition-delay: .2s;
+		transition-delay: .2s;
+    }
+    &.current {
+        .img-1 {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+            -webkit-transition-delay: .1s;
+            transition-delay: .1s;
+            opacity: 1;
+        }
+    }
+    &.animateIn {
+        -webkit-transition-delay: .1s;
+        transition-delay: .1s;
+        &.previous {
+            .img-1 {
+                -webkit-transform: translateX(50px);
+                transform: translateX(50px);
+                -webkit-transition-delay: .5s;
+                transition-delay: .5s;
+                opacity: 0;
+            }
+        }
+        &.next {
+            .img-1 {
+                -webkit-transform: translateY(50px);
+                transform: translateY(50px);
+                -webkit-transition-delay: 1.3s;
+                transition-delay: 1.3s;
+                opacity: 0;
+            }
+        }
+    }
+}
+
+.slide {
+    .img-2 {
+        transition: all .7s ease;
+        -webkit-transform: translateY(60px);
+        transform: translateY(60px);
+        opacity: 0;
+    }
+    .animateOut .img-2 {
+        -webkit-transform: translateY(-50px);
+        transform: translateY(-50px);
+        -webkit-transition-delay: .2s;
+		transition-delay: .2s;
+    }
+    &.current {
+        .img-2 {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+            -webkit-transition-delay: .1s;
+            transition-delay: .1s;
+            opacity: 1;
+        }
+    }
+    &.animateIn {
+        -webkit-transition-delay: .1s;
+        transition-delay: .1s;
+        &.previous {
+            .img-2 {
+                -webkit-transform: translateY(-50px);
+                transform: translateY(-50px);
+                -webkit-transition-delay: .5s;
+                transition-delay: .5s;
+                opacity: 0;
+            }
+        }
+        &.next {
+            .img-2 {
+                -webkit-transform: translateY(-50px);
+                transform: translateY(-50px);
+                -webkit-transition-delay: 1.3s;
+                transition-delay: 1.3s;
+                opacity: 0;
             }
         }
     }

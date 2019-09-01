@@ -17,24 +17,25 @@
         position: relative;
         text-align: center;
         .Slide {
-            margin-top: 80px;
-            min-height: 300px;
+            margin-top: 40px;
+            min-height: 350px;
             position: relative;
             padding:24px;
             .Box {
-                padding: 24px 0;
+                padding: 32px 0;
                 // border: 1px solid red;
                 display: flex;
                 justify-content: space-between;
                 .Left {
                     flex: 1;
+                    position: relative;
                     .ImgWrap {
                         @include box-shadow(0 2px 16px 2px rgba(#7242d9,.35));
-                        // border: 1px solid red;
                         width: 100%;
                         height: 300px;
                         overflow: hidden;
                         position: relative;
+                        z-index: 0;
                         @include border-radius(border-radius, 8px);
                         .ImgContent {
                             position: absolute;
@@ -46,6 +47,20 @@
                             @include transform(translate(-50%,-50%));
                         }
                     }
+                }
+                .ImgContent1 {
+                    left: -20px;
+                    bottom: -45px;
+                    width: 250px;
+                    z-index: 1;
+                    position: absolute;
+                }
+                .ImgContent2 {
+                    left: 90px;
+                    bottom: 40px;
+                    width: 250px;
+                    z-index: 1;
+                    position: absolute;
                 }
                 .Right {
                     margin-left: 24px;

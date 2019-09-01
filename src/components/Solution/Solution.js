@@ -8,6 +8,8 @@ import 'react-animated-slider/build/horizontal.css';
 import './slider-animation.scss';
 import Icon from '../UI/Icon/Icon';
 import contentImg from '../../assets/images/dashboard.png';
+import contentImg1 from '../../assets/images/gis.png';
+import contentImg2 from '../../assets/images/detail.png';
 
 function SamplePrevArrow(props) {
     const { onClick } = props;
@@ -33,35 +35,15 @@ function SampleNextArrow(props) {
 
 const solution = props => {
 
-    const content = [
-        {
-            title: 'Vulputate Mollis Ultricies Fermentum Parturient',
-            description:
-            'Aenean eu leo quam. Pellentesque ornare sem ',
-            button: 'Read More',
-            image: 'https://i.imgur.com/ZXBtVw7.jpg',
-            user: 'Luan Gjokaj',
-            userProfile: 'https://i.imgur.com/JSW6mEk.png'
-        },
-        {
-            title: 'Tortor Dapibus Commodo Aenean Quam',
-            description:
-            'Nullam id dolor id nibh ultricies vehicula ut id elit. ',
-            button: 'Discover',
-            image: 'https://i.imgur.com/DCdBXcq.jpg',
-            user: 'Erich Behrens',
-            userProfile: 'https://i.imgur.com/0Clfnu7.png'
-        },
-        {
-            title: 'Phasellus volutpat metus',
-            description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis ',
-            button: 'Buy now',
-            image: 'https://i.imgur.com/DvmN8Hx.jpg',
-            user: 'Bruno Vizovskyy',
-            userProfile: 'https://i.imgur.com/4KeKvtH.png'
-        }
-    ];
+    const content = [{
+        text : 'Enhancing defense and security sector by combining following features such as Face Recognition, License Plate Recognition, Crowd and Behavior Analytics, and Time Compression Analysis.'
+    }, {
+        text : 'Enhancing defense and security sector by combining following features such as Face Recognition, License Plate Recognition, Crowd and Behavior Analytics, and Time Compression Analysis.'
+    }, {
+        text : 'Enhancing defense and security sector by combining following features such as Face Recognition, License Plate Recognition, Crowd and Behavior Analytics, and Time Compression Analysis.'
+    }, {
+        text : 'Enhancing defense and security sector by combining following features such as Face Recognition, License Plate Recognition, Crowd and Behavior Analytics, and Time Compression Analysis.'
+    }];
 
     const settings = {
         previousButton: <SamplePrevArrow />,
@@ -81,6 +63,8 @@ const solution = props => {
                                     className="slider-content">
                                     <div className="inner">
                                         <div className={classes.Box}>
+                                                <img className={['img-1',classes.ImgContent1].join(' ')} src={contentImg1} alt="content" />
+                                                <img className={['img-2',classes.ImgContent2].join(' ')} src={contentImg2} alt="content" />
                                             <div className={['bx-left',classes.Left].join(' ')}>
                                                 <div className={classes.ImgWrap}>
                                                     <img className={classes.ImgContent} src={contentImg} alt="content" />
@@ -89,7 +73,7 @@ const solution = props => {
                                             <div className={['bx-right',classes.Right].join(' ')}>
                                                 <div className={classes.Title}>Security & <span>Defense</span></div>
                                                 <div className={classes.Desc}>
-                                                    Enhancing defense and security sector by combining following features such as Face Recognition, License Plate Recognition, Crowd and Behavior Analytics, and Time Compression Analysis.
+                                                    {item.text}
                                                 </div>
                                             </div>
                                         </div>
